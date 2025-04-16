@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Face Verification</title>
+    <title>Live Face Recognition</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Face Verification</h1>
-    <p>View your webcam feed and check if your face matches the reference image.</p>
-    <video id="video" autoplay></video>
-    <button id="startButton">Start Camera</button>
-    <img src="/video_feed" alt="Video Feed" id="serverFeed">
+    <h1>Live Face Recognition</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="file" id="fileInput" accept="image/*" required>
+        <button type="submit">Upload Image</button>
+    </form>
+    <div id="result"></div>
+
     <script src="/static/script.js"></script>
 </body>
 </html>
